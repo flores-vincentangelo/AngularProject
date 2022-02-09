@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./Styles/Register/Register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-container-form">
+            <form method="POST" action="/register">
+                <h1>Sign Up</h1>
+                <p>It's quick and easy.</p>
+                <hr>
+                <div class="register-container-form-field">
+                    <div class="register-container-form-field-fullname">
+                        <input id="first-name" type="text" placeholder="First name" name="FirstName" required onkeyup="lettersInput(this)">
+                        <input id="last-name" type="text" placeholder="Last name" name="LastName" required onkeyup="lettersInput(this)">
+                    </div>
+                </div>
+                <div class="register-container-form-field">
+                    <input type="text" placeholder="Email address" name="EmailAddress" required>
+                </div>
+                <div class="register-container-form-field">
+                    <input type="text" placeholder="Mobile Number" name="MobileNumber" onkeyup="numbersInput(this)" onkeydown="mobileNumLimit(this)">
+                </div>
+                <div class="register-container-form-field">
+                    <input type="password" placeholder="New Password" name="Password" required class="password" onkeydown="passwordLimit(this)">
+                </div>
+                <div class="register-container-form-field">
+                    <input type="password" placeholder="Confirm Password" name="ConfirmPassword" required class="confirm-password">
+                </div>
+                <div class="register-container-form-field">
+                    <label>Birthday</label>
+                    <input type="date" id="date" name="Birthday" required>
+                </div>
+                <div class="register-container-form-field">
+                    <label>Gender</label>
+                    <select name="Gender">
+                        <option>-----</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </div>
+                <button class="signup-button" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="./Scripts/Register.js"></script>
+</body>
+</html>

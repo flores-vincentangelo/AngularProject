@@ -1,0 +1,228 @@
+// @import '../Shared/colors';
+// @import '../Shared/_header';
+@import '../Shared/import';
+
+.friends{
+    // position: relative;
+    // top: $header-height;
+    // top: 0;
+    height: 100vh;
+    // display: flex;
+    // flex-direction: row;
+    // width: 100vw;
+
+    $sidepanel-padding: 10px;
+    $sidepanel-width: 350px;
+
+    &-sidepanel{
+        background-color: white;
+        position: fixed;
+        left: 0;
+        top: $header-total-height;
+        // padding-left: $sidepanel-padding;
+        padding-top: $sidepanel-padding;
+        // margin-right: $sidepanel-padding;
+        width: $sidepanel-width;
+        box-shadow: $box-shadow;
+
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+
+        &-title{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 15px;
+        }
+
+        &-link{
+            vertical-align: middle;
+            height: 5%;
+            display: flex;
+            align-items: center;
+            margin: 5px 10px;
+            text-decoration: none;
+            color: rgb(105, 104, 104);
+            &-icon{
+                height: 30px;
+                width: auto;
+                margin-right: 10px;
+            }
+            &:hover{
+                color: #1877f2;
+            }
+        }
+    }
+
+    &-main{
+        background-color: $grey;
+        position: absolute;
+        top: $header-total-height;
+        left: $sidepanel-width;
+        padding-top: $sidepanel-padding;
+        right: 0;
+        // padding-left: $sidepanel-padding;
+        margin: 10px;
+        
+        &-requests{
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            &-title{
+                font-weight: bold;
+                margin-bottom: 20px;
+                // padding-left: $sidepanel-padding;
+                align-self: flex-start;
+            }
+    
+            &-friendcardcontainer{
+                display:grid;
+                $grid-column-width: auto;
+                grid-template-columns: 1fr 1fr 1fr;
+                $grid-gap:10px;
+                grid-gap: $grid-gap $grid-gap;
+                // justify-content: space-around;
+                // text-align: center;
+                
+    
+                &-friendreqcard{
+                    background-color: white;
+                    border-radius: 20px;
+                    width: 225px;
+                    // padding: 10px;
+                    height: 350px;
+                    box-shadow: $box-shadow;
+    
+                    &-picture{ 
+                        height: 50%;
+                        width: 100%;
+    
+                        & img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 20px 20px 0 0;
+                        }
+                    }
+    
+                    &-content{
+                        height: 50%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        
+                        $padding-left-right:20px;
+                        padding: 0 $padding-left-right 0 $padding-left-right;
+    
+                        &-name{
+                            font-weight: bold;
+                            & a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
+        
+                        $button-height:50px;
+                        $button-width:80%;
+    
+                        &-confirm, &-delete{
+                            display: flex;
+                            flex-direction: column;
+    
+                            &-button{
+                                border-radius: 10px;
+                                border:none;
+                                font-weight: bold;
+                                cursor: pointer;
+                            }
+                        }
+        
+                        &-confirm{
+                            width: 100%;
+                            &-button{
+                                width: 100%;
+                                background-color: $blue;
+                                color: white;
+                                width: $button-width;
+                                height: $button-height;
+                            }
+                        }
+        
+                        &-delete{
+                            width: 100%;
+                            &-button{
+                                width: 100%;
+                                color: black;
+                                width: $button-width;
+                                height: $button-height;
+                                background-color: $grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-all{
+            display: none;
+            width: 100%;
+            height: 100%;
+
+            &-title{
+                font-weight: bold;
+                margin-bottom: 20px;
+                // padding-left: $sidepanel-padding;
+            }
+
+            &-container{
+                display: grid;
+                /* flex-direction: column; */
+                align-items: center;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-row-gap: 10px;
+                grid-column-gap: 10px;
+
+                &-friendcard{
+                    background-color: white;
+                    margin: 5px 0 5px 0;
+                    // height: 100px;
+                    padding: 10px;
+                    width: 90%;
+                    display: flex;
+                    $border-radius: 20px;
+                    border-radius: $border-radius;
+                    flex-direction: row;
+                    align-items: center;
+                    box-shadow: $box-shadow;
+
+                    &-picture{
+                        $picture-dimensions:90px; 
+                        height: $picture-dimensions;
+                        width: $picture-dimensions;
+    
+                        & img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    &-name{
+                        padding-left: 10px;
+                        &-link{
+                            text-decoration: none;
+                            color: black;
+                            &:hover{
+                                color: #1877f2;
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@{Layout = "/Views/_Layout.cshtml";}
+@model Models.FriendsModel
+
+<link rel="stylesheet" href="./Styles/Friends/Friends.css">
+<script src="Scripts/Friends.js"></script>
+
+<div class="friends">
+    <div class="friends-sidepanel">
+        <div class="friends-sidepanel-title">Friends</div>
+        <a class="friends-sidepanel-link" href="/friends" id="friends-sidepanel-link-reqs"><img class="friends-sidepanel-link-icon" src="Images/request.png">Friend Requests</a>
+        <a class="friends-sidepanel-link" href="/friends" id="friends-sidepanel-link-all"><img class="friends-sidepanel-link-icon" src="Images/friends.png">All Friends</a>
+    </div>
+    <div class="friends-main">
+        <div class="friends-main-requests">
+            <div class="friends-main-requests-title">Friend Requests</div>
+            <div class="friends-main-requests-friendcardcontainer">
+                @{
+                    if(Model.FriendRequestObjList == null)
+                    {
+                        <div>No Friend Requests</div>
+                    }
+                    else
+                    {
+                        foreach (Models.UserModel item in Model.FriendRequestObjList)
+                        {
+                            await Html.RenderPartialAsync("_FriendReqCard.cshtml",item);
+                        }
+                    }
+                }
+            </div>
+        </div>
+        <div class="friends-main-all">
+            <div class="friends-main-all-title">All Friends</div>
+            <div class="friends-main-all-container">
+                @{
+                    if(Model.FriendsObjList == null)
+                    {
+                        <div>No Friends Yet</div>
+                    }
+                    else
+                    {
+                        foreach (Models.UserModel item in Model.FriendsObjList)
+                        {
+                            await Html.RenderPartialAsync("_FriendCard.cshtml",item);
+                        }
+                    }
+                }
+            </div>
+        </div>
+        
+    </div>
+</div>

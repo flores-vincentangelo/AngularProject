@@ -1,0 +1,173 @@
+.friends {
+  height: 100vh;
+}
+.friends-sidepanel {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  padding-top: 10px;
+  width: 350px;
+  box-shadow: 0 0.1px 8px 2px gray;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.friends-sidepanel-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 15px;
+}
+.friends-sidepanel-link {
+  vertical-align: middle;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+  text-decoration: none;
+  color: #696868;
+}
+.friends-sidepanel-link-icon {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+.friends-sidepanel-link:hover {
+  color: #1877f2;
+}
+.friends-main {
+  background-color: #e9ebee;
+  position: absolute;
+  top: 60px;
+  left: 350px;
+  padding-top: 10px;
+  right: 0;
+  margin: 10px;
+}
+.friends-main-requests {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+.friends-main-requests-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+.friends-main-requests-friendcardcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px 10px;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard {
+  background-color: white;
+  border-radius: 20px;
+  width: 225px;
+  height: 350px;
+  box-shadow: 0 0.1px 8px 2px gray;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-picture {
+  height: 50%;
+  width: 100%;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 20px 0 20px;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-name {
+  font-weight: bold;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-name a {
+  text-decoration: none;
+  color: black;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-confirm, .friends-main-requests-friendcardcontainer-friendreqcard-content-delete {
+  display: flex;
+  flex-direction: column;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-confirm-button, .friends-main-requests-friendcardcontainer-friendreqcard-content-delete-button {
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-confirm {
+  width: 100%;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-confirm-button {
+  width: 100%;
+  background-color: #1877f2;
+  color: white;
+  width: 80%;
+  height: 50px;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-delete {
+  width: 100%;
+}
+.friends-main-requests-friendcardcontainer-friendreqcard-content-delete-button {
+  width: 100%;
+  color: black;
+  width: 80%;
+  height: 50px;
+  background-color: #e9ebee;
+}
+.friends-main-all {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.friends-main-all-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.friends-main-all-container {
+  display: grid;
+  /* flex-direction: column; */
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+.friends-main-all-container-friendcard {
+  background-color: white;
+  margin: 5px 0 5px 0;
+  padding: 10px;
+  width: 90%;
+  display: flex;
+  border-radius: 20px;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0.1px 8px 2px gray;
+}
+.friends-main-all-container-friendcard-picture {
+  height: 90px;
+  width: 90px;
+}
+.friends-main-all-container-friendcard-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.friends-main-all-container-friendcard-name {
+  padding-left: 10px;
+}
+.friends-main-all-container-friendcard-name-link {
+  text-decoration: none;
+  color: black;
+}
+.friends-main-all-container-friendcard-name-link:hover {
+  color: #1877f2;
+}
+
+/*# sourceMappingURL=Friends.css.map */

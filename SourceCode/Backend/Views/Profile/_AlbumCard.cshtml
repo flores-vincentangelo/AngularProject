@@ -1,0 +1,13 @@
+@model Models.AlbumModel
+@{
+    var createdDate = new System.DateTime(1970, 1, 1).AddSeconds(Model.CreatedDate).ToString("yyyy-MM-dd");
+                        
+}
+
+<div class="albumcard-main-container">
+    <div class="albumcard-folder-container">
+        <img class="albumcard-folder" src="./Images/folder.png" alt="folder icon">
+        <button class="albumcard-open-btn" onclick="OpenAlbum(@Model.AlbumId);" >@Model.AlbumName</button>
+    </div>
+</div>
+

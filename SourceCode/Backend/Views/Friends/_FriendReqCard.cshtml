@@ -1,0 +1,17 @@
+@model Models.UserModel
+
+<div class="friends-main-requests-friendcardcontainer-friendreqcard">
+    <div class="friends-main-requests-friendcardcontainer-friendreqcard-picture">
+        <a href=@($"/{Model.ProfileLink}")><img src=@Model.Photo></a>
+    </div>
+    <div class="friends-main-requests-friendcardcontainer-friendreqcard-content">
+        <div class="friends-main-requests-friendcardcontainer-friendreqcard-content-name"><a href=@($"/{Model.ProfileLink}")>@Model.FirstName @Model.LastName</a></div>
+        <div class="friends-main-requests-friendcardcontainer-friendreqcard-content-confirm">
+            <button class="friends-main-requests-friendcardcontainer-friendreqcard-content-confirm-button" id=@Model.EmailAddress>Confirm</button>
+        </div>
+        <div class="friends-main-requests-friendcardcontainer-friendreqcard-content-delete">
+            <button class="friends-main-requests-friendcardcontainer-friendreqcard-content-delete-button" id=@Model.EmailAddress>Delete</button>
+        </div>
+    </div>
+    
+</div>

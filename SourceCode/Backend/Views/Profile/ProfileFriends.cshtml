@@ -1,0 +1,22 @@
+@model List<Models.UserModel>
+<link rel="stylesheet" type="text/css" href="./Styles/Profiles/ProfileFriends.css">
+
+
+<div class="profile-ext-container">
+    <h3>Friends</h3>
+    <div class="profile-ext-container-friendcontainer">
+        @{
+            if(Model == null)
+            {
+                <div>No Friends</div>
+            }
+            else
+            {
+                foreach (Models.UserModel user in Model)
+                {
+                    await Html.RenderPartialAsync("~/Views/Friends/_FriendCard.cshtml",user);
+                }
+            }
+        }
+    </div>
+</div>
