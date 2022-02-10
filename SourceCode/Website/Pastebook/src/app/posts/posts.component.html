@@ -13,12 +13,9 @@
             <p id="label">Posts</p>
         </div>
         <div id="user-post">
-            <!-- <p>Lists of posts-card will go here</p> -->
-            <app-post-card></app-post-card>
-            <app-post-card></app-post-card>
-            <app-post-card></app-post-card>
-            <app-post-card></app-post-card>
-            <app-post-card></app-post-card>
+            <div *ngFor="let post of postsList">
+                <app-post-card></app-post-card>
+            </div>
         </div>
     </div>
 </div>

@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostCardComponent } from './posts/post-card/post-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PostCardComponent } from './posts/post-card/post-card.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
