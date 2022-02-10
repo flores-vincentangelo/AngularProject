@@ -19,10 +19,14 @@
             <div class="login-container-form">
                 <form class = "login-container-form-form" [formGroup]="userForm">
                     <input formControlName="email" type="email" id="EmailAddress" placeholder="Email address">
-                    <p *ngIf="email?.touched && email?.invalid"><span>**This field is required!</span><br>
-                    <span>**Use a valid email (ex. name@gmail.com).</span></p><br><br>
+                    <p *ngIf="email?.touched && email?.invalid">
+                        <span *ngIf="email?.errors?.['required']">**This field is required!</span><br>
+                        <span *ngIf="email?.errors?.['pattern']">**Use a valid email (ex. name@gmail.com).</span>
+                    </p><br><br>
                     <input formControlName="password" type="password" id="Password" placeholder="Password">
-                    <p *ngIf="password?.touched && password?.invalid"><span>**This field is required!</span></p><br><br>
+                    <p *ngIf="password?.touched && password?.invalid">
+                        <span *ngIf="password?.errors?.['required']">**This field is required!</span>
+                    </p><br><br>
                     <input type = "submit" value = "Log In" class="login-button" [disabled]="userForm.invalid">
                 </form>
             </div>
