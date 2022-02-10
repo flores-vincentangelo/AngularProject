@@ -1,0 +1,17 @@
+.profile-container {
+    display: flex;
+    margin: 10% 5% 2%;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-cover-container {
+    width: 100vw;
+    height: 250px;
+    background: dodgerblue;
+    position: absolute;
+    top: -150px;
+    z-index: -1;
+}
