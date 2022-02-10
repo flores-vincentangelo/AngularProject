@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostCardComponent } from './posts/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostsComponent } from './posts/posts.component';
     HomeComponent,
     ProfileComponent,
     HeaderComponent,
-    PostsComponent
+    PostsComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,
