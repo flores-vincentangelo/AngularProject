@@ -1,1 +1,30 @@
-<p>header works!</p>
+<div class="header">
+    <div class="header-left">
+        <a routerLink="/"><img src="../../assets/pastebook-logo.png"/></a>
+    </div>
+    <div class="header-middle">
+        <a routerLink="/"><img src="../../assets/home.png"/></a>
+    </div>
+    <div class="header-right">
+        <div class="header-right-user"></div>
+        <button 
+            class="header-right-button"
+            (click)="isAccountPanelVisibleToggle()"
+        >
+            <img class="header-right-button-img" src="../../assets/gear.png">
+        </button>
+    </div>
+</div>
+<div 
+    *ngIf="isAccountPanelVisible"
+    class="accountpanel"
+>
+    <div class="accountpanel-usercontainer">
+
+    </div>
+    <div class="accountpanel-logout">
+        <button class="accountpanel-logout-button">
+            Log out
+        </button>
+    </div>
+</div>
