@@ -6,31 +6,26 @@ body {
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .login-container {
     display: flex;
     margin: 12% auto;
     justify-content: center;
     position: relative;
 }
-
 .login-container-logo {
     margin-right: 20%;
 }
-
 .login-container-logo h1 {
     font-family: 'Roboto', sans-serif;
     color: #1877f2;
     font-size: 40px;
     margin-bottom: 0;
 }
-
 .login-container-logo p {
     color: #1c1e21;
     margin-top: 10px;
     font-size: 15px;
 }
-
 .login-container-form {
     background-color: #e9ebee;
     height: auto;
@@ -39,30 +34,25 @@ body {
     border-radius: 5px;
     border: solid white 1.5px;
 }
-
 .login-container-form a {
     text-decoration: none;
 }
-
 .login-container-form form {
     width: 100%;
     font-size: 15px;
     color: #1c1e21;
 }
-
 .login-container-form form input {
     width: 250px;
     padding: 10px;
     border-radius: 5px;
     border: solid #e9ebee 1.5px;
 }
-
 .login-container-form hr {
     margin: 7% auto;
     border: solid 1px #e9ebee;
     background-color: #e9ebee;
 }
-
 .login-container-form form .login-button {
     width: 100%;
     padding: 10px;
@@ -73,4 +63,9 @@ body {
     text-align: center;
     font-weight: bold;
     cursor: pointer;
+}
+form p {
+    color: red;
+    font-size: 10px;
+    margin-bottom: 0;
 }
