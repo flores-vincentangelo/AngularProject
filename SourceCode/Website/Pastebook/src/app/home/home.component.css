@@ -65,6 +65,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1%;
+    /* background-color: lightblue; */
   }
   .home-body-timeline-post {
     width: 90%;
