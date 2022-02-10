@@ -1,0 +1,446 @@
+.profile-post-container-status-post {
+    background-color: white;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    margin: auto auto 2% auto;
+    border-radius: 15px;
+}
+
+.profile-post-container-status-post hr,
+#post-modal-container-likers hr {
+   margin: 0;
+   border: solid .2px #d3d5da;
+   background-color: #d3d5da;
+}
+
+.profile-post-container-status-post-profile {
+    display: flex;   
+    font-size: 13px;
+}
+.profile-post-container-status-post-profile a {
+    text-decoration: none;
+    color: black;
+    padding-top: 7px;
+}
+.profile-post-container-status-post-profile img {
+    width: 1vw;
+    height: 1vw;
+}
+
+.profile-post-container-status-post-profile-buttons {
+    display: flex;
+    margin-left: 56%;
+}
+
+.profile-post-container-status-post-profile-buttons button {
+    width: 100%;
+    height: 50%;
+    border: none;
+    margin: 2px;
+    background-color: rgb(241, 239, 239);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.profile-post-container-status-post-profile-buttons button:hover {
+    background-color: rgb(218, 214, 214);
+}
+
+.profile-post-container-status-post-profile-buttons img {
+    width: 0.8vw;
+    height: auto;
+    margin: auto;
+}
+
+.profile-post-container-status-post-profile .user-photo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.profile-post-container-status-post-caption {
+    margin-top: 20px;
+    font-size: 13px;
+    margin-left: 20px
+}
+
+.profile-post-container-status-post-status {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    margin-bottom: 10px
+}
+
+#like {
+    text-align: left;
+    width: 50%;
+    margin-left: 13px;
+    color: black;
+}
+
+#comment {
+    text-align: right;
+    width: 50%;
+    margin-right: 13px;
+    margin-left: 50%;
+}
+
+.profile-post-container-status-post-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+}
+
+#like-post, #comment-post {
+    padding-left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.profile-post-container-status-post-buttons img {
+    width: 1vw;
+    height: auto;
+}
+
+.profile-post-container-status-post-buttons button {
+    width: 48%;
+    border: none;
+    padding: 5px;
+    margin: 2px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.profile-post-container-status-post-buttons button:hover {
+    background-color: rgba(24, 119, 242, 0.7);
+    font-weight: bold;
+    color: white;
+}
+
+.profile-post-container-status-post-photo img {
+    /* width: 39vw; */
+    width: 100%;
+    height: auto;
+    /* margin-right: 10%; */
+    margin-top: 2%;
+    object-fit: cover;
+}
+
+.profile-post-container-status-post-comments {
+    font-size: 13px;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.commentcard{
+    margin: 10px 0 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.commentcard-picture img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    object-fit: cover;
+}
+
+.commentcard-contents{
+    margin-left: 5px;
+    background-color: rgb(241, 239, 239);
+    height: auto;
+    width: auto;
+    padding: 8px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+.commentcard-contents-commenter{
+    font-weight: bold;
+}
+
+
+/* 
+.profile-post-container-status-post-comments img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+} */
+
+/* .friend-details {
+    margin-left: 5px;
+    background-color: rgb(241, 239, 239);
+    height: auto;
+    width: auto;
+    padding: 8px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+} */
+
+/* #friend-name {
+    font-weight: bold;
+} */
+
+#date-created {
+    font-size: 9px;
+}
+
+#user-details {
+    padding-top: 7px;
+}
+
+#poster-fullname {
+    font-weight: bold;
+}
+
+#post-modal-container-update,
+#post-modal-container-delete,
+.post-modal-container-comment,
+#post-modal-container-likers {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.4);
+}
+
+#modal-container-close-delete,
+#modal-container-close-update,
+.modal-container-close-comment {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #d9dbdd;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ #modal-container-close-delete:hover,
+ #modal-container-close-update:hover,
+ .modal-container-close-comment:hover {
+    background-color: rgb(218, 214, 214);
+    color: black;
+}
+
+#post-modal-container-1-delete {
+    background-color: #fefefe;
+    margin: 13% auto;
+    padding: 15px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    width: 24%;
+    height: 18vh;
+}
+
+#buttons-delete {
+    margin-top: 7%;
+}
+
+#buttons-delete button:hover {
+    background-color: rgb(24, 119, 242);
+}
+
+#buttons-delete button {
+    width: 20%;
+    cursor: pointer;
+    background-color: rgba(24, 119, 242, 0.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#modal-container-caption-delete {
+    margin: 12% auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.post-modal-container-1-update,
+.post-modal-container-1-comment {
+    background-color: #fefefe;
+    margin: 13% auto;
+    padding: 15px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    width: 40%;
+    height: 22vh;
+}
+
+.modal-container-user-update {
+    display: flex;
+    margin-top: 15px;
+}
+
+.modal-container-user-update #user-details-update {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.modal-container-user-update img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.modal-container-caption-update {
+    margin-top: 15px;
+    height: 60px;
+}
+
+.modal-container-photo-update {
+    border: rgba(0, 0, 0, 0.7) 2px solid;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 40vh;
+    margin-top: 8px;
+}
+
+#modal-container-photo-img-update {
+    display: block;
+    margin: auto;
+    height: 40vh;
+    width: 30vw;
+}
+
+.caption-update,
+.friend-comment {
+    width: 96.5%;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+.user-button-update,
+.friend-button-comment {
+    float: right;
+    margin-right: 2px;
+    cursor: pointer;
+    background-color: rgba(24, 119, 242, 0.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+    padding: 4px 6px;
+    font-weight: bold;
+}
+
+.user-button-update:hover,
+.friend-button-comment:hover {
+    background-color: rgb(24, 119, 242);
+}
+
+.caption-add-update,
+.friend-comment-form {
+    margin-bottom: 5px;
+}
+
+.modal-container-comment {
+    margin-top: 50px;
+    height: 60px;
+}
+
+.modal-container-comment {
+    margin-top: 50px;
+    height: 60px;
+}
+
+.friend-comment {
+    width: 96.5%;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+#post-modal-container-likers {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal-container-close-likers {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #d9dbdd;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#modal-container-close-likers:hover {
+    background-color: rgb(218, 214, 214);
+    color: black;
+}
+
+.post-modal-container-1-likers {
+    background-color: #fefefe;
+    margin: 13% auto;
+    padding: 15px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    width: 30%;
+    height: auto;
+}
+
+.modal-container-title-likers {
+    text-align: center;
+    font-size: 13px;
+}
+
+#modal-container-likers-name {
+    font-size: 13px;
+    margin: auto auto auto 5px;
+}
+
+.modal-container-likers {
+    display: flex;
+    margin-top: 15px;
+}
+
+.modal-container-likers-name {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.modal-container-likers img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#post-container-status-likers {
+    text-decoration: none;
+    width: 100%;
+}
