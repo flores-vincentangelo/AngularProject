@@ -187,4 +187,29 @@ public class HomeController: Controller
         return RedirectToAction("doLoginAction", "Login");
     }
 
+    [HttpGet]
+    [Route("/user")]
+    public IActionResult GetHomeUser()
+    {
+        ViewData["Title"] = "";
+        string? cookieEmail = HttpContext.Request.Cookies["email"];
+        string? cookieSessionId = HttpContext.Request.Cookies["sessionId"];
+        string? cookieProfileLink = HttpContext.Request.Cookies["profilelink"];
+
+        Console.WriteLine("cookieEmail: " + cookieEmail);
+
+        if(cookieSessionId != null)
+        {
+            SessionsModel? sessionModel = DbSessions.GetSessionById(cookieSessionId);
+            if(sessionModel != null)
+            {
+                UserModel user = DbUsers.GetUserByEmail(cookieEmail);
+
+                return Json(user);
+            }
+        }
+
+        return RedirectToAction("doLoginAction", "Login");
+    }
+
 }
