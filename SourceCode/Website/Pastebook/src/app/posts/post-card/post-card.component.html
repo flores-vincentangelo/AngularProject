@@ -1,10 +1,10 @@
 <div class="profile-post-container-status-post">
     <div class="profile-post-container-status-post-profile">
-        <img class="user-photo" src="../../../assets/img_avatar.png">
+        <img class="user-photo" src={{post.poster.photo}}>
         <a href="#">
             <span id="user-details">
                 <span id="poster-fullname">
-                    {{post.profileLink}}
+                    {{post.poster.firstName}} {{post.poster.lastName}}
                 </span><br>
                 <span id="date-created">{{post.readableDatePosted}}</span>
             </span>
