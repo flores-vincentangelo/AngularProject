@@ -23,5 +23,4 @@ export class PostsComponent implements OnInit {
   AddPostVisibleToggle(){
     this.isAddPostVisible = !this.isAddPostVisible;
   }
-
 }
