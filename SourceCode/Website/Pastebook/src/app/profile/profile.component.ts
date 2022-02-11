@@ -11,7 +11,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription | null = null;
   profileLink: string = '';
-  isAddpPostVisible = false;
   constructor(
     private route: ActivatedRoute
   ) { }
@@ -25,10 +24,4 @@ export class ProfileComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
       this.subscription?.unsubscribe();
   }
-
-  AddpPostVisibleToggle(){
-    this.isAddpPostVisible = !this.isAddpPostVisible;
-  }
-
-
 }
