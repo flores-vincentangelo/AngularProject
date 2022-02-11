@@ -9,11 +9,9 @@ class Program
             {
                 options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
             });
-        builder.Services.AddCors();
         var app = builder.Build();
         app.UseStaticFiles();
         app.UseRouting();
-        app.UseCors(config => config.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
         app.MapControllers();
         app.UseFileServer();
         app.Run();
