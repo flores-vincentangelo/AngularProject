@@ -5,6 +5,7 @@ public class PostModel
     public int? UserId {get;set;}
     public int? PostId { get; set; }
     public long DatePosted { get; set; }
+    public string? ReadableDatePosted { get; set; }
     public string? Caption { get; set; }
     public int PhotoId {get;set;}
     public string? Photo {get;set;}
