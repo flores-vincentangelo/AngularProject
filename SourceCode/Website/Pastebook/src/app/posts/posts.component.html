@@ -14,7 +14,7 @@
         </div>
         <div id="user-post">
             <div *ngFor="let post of postsList">
-                <app-post-card></app-post-card>
+                <app-post-card [post]="post"></app-post-card>
             </div>
         </div>
     </div>

@@ -177,7 +177,8 @@ public class HomeController: Controller
                     }
                 }
 
-                return Ok($"{JsonSerializer.Serialize(profileOwner.PostsList, new JsonSerializerOptions {WriteIndented = true})}");
+                // return Ok($"{JsonSerializer.Serialize(profileOwner.PostsList, new JsonSerializerOptions {WriteIndented = true})}");
+                return Json(profileOwner.PostsList);
             }
         }
 
