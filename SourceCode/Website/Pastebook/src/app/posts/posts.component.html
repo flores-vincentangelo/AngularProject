@@ -5,7 +5,7 @@
                 <img id="user-photo" src="../../assets/img_avatar.png">
                 <form class="status-edit">
                     <input type="text" autocomplete="off" id="status" name="status"
-                        placeholder="What's on your mind?">
+                        placeholder="What's on your mind?" (focus)="AddPostVisibleToggle()">
                 </form>
             </div>
         </div>
@@ -20,10 +20,13 @@
     </div>
 </div>
 
-<div class="post-modal-container" style="display: none;">
+<div 
+    class="post-modal-container"
+    *ngIf="isAddPostVisible"
+>
     <div class="post-modal-container-1">
         <div class="modal-container-title">
-            <span id="modal-container-close">&times;</span>
+            <span id="modal-container-close" (click)="AddPostVisibleToggle()">&times;</span>
         </div>
         <div class="modal-container-user">
             <img class="user-photo" src=@Model.User.Photo>

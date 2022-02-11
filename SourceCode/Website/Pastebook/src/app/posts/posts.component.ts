@@ -9,6 +9,7 @@ import { PostsService } from '../posts.service';
 export class PostsComponent implements OnInit {
 
   postsList: any[] = [];
+  isAddPostVisible = false;
 
   constructor(private postsService: PostsService) { }
 
@@ -17,6 +18,10 @@ export class PostsComponent implements OnInit {
       .subscribe(data => {
         this.postsList = data;
       });
+  }
+
+  AddPostVisibleToggle(){
+    this.isAddPostVisible = !this.isAddPostVisible;
   }
 
 }
