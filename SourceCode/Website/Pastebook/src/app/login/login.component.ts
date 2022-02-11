@@ -35,6 +35,9 @@ export class LoginComponent implements OnInit {
 
   logIn() {
     this.login.login(this.email?.value, this.password?.value).subscribe((data: any) => {
+      document.cookie = 'email=' + this.email?.value;
+      const sessionId = data.id;
+      document.cookie = 'sessionId=' +  sessionId;
       this.router.navigate(['']);
     });
   }
