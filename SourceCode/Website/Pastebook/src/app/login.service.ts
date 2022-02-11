@@ -1,33 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CookieService } from 'ngx-cookie-service';
-
-interface UserCredentials {
-  emailAddress: string;
-  password: string;
-}
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class LoginService {
-  private cookie_email='';
-  private cookie_password='';
-  private all_cookies:any='';
 
-  constructor(private http: HttpClient, private cookieService:CookieService) {
+  constructor(private http: HttpClient) {
   }
 
-  login(cookie_email: any, cookie_password: any):any {
-    var userCreds = {
-      EmailAddress : cookie_email,
-      Password : cookie_password
-    }
-    return this.http.post<any>(`http://localhost:5000/login`, userCreds);
+  login(email: string, password: string): Observable<any> {
+    return this.http.post<any>(`http://localhost:5000/login`, { EmailAddress: `${email}`, Password: `${password}` });
   }
 
-  logout(){
-    return this.http.delete<any>(`http://localhost:5000/login`);
+  logout(): Observable<any> {
+    return this.http.delete<any>(`http://localhost:5000/login/`);
   }
 }
