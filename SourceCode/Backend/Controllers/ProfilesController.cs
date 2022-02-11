@@ -55,12 +55,15 @@ public class ProfilesController: Controller
                         }
                     }
                     
-                    return View("/Views/Profile/Profile.cshtml", profileOwner);
+                    // return View("/Views/Profile/Profile.cshtml", profileOwner);
+                    return Json(profileOwner.User);
                 }
             }
-            return RedirectToAction("doLoginAction", "Login");
+            // return RedirectToAction("doLoginAction", "Login");
+            return Unauthorized();
         }
-        return RedirectToAction("doLoginAction", "Login");
+        // return RedirectToAction("doLoginAction", "Login");
+        return Unauthorized();
     }
     
     [HttpPatch]
