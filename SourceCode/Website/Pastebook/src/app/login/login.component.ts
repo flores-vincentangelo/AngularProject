@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+// import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +18,14 @@ export class LoginComponent implements OnInit {
       Validators.required
     ])
   });
+  // router: any;
   
-  constructor() { }
+  constructor() {}
+  // constructor(private loginService: LoginService) { 
+  // //   if (this.loginService.loggedInUserValue) {
+  // //     this.router.navigate(['/']);
+  // // }
+  // }
 
   ngOnInit(): void {
   }
