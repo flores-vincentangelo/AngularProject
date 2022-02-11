@@ -12,64 +12,6 @@ public class ProfilesController: Controller
         
         UserModel profileOwner = DbUsers.GetInformationById(profileLink);
         return Json(profileOwner);
-
-        // bool doesProfileExist = DbUsers.DoesProfileExist(profileLink);
-        // if(doesProfileExist)
-        // {
-        //     string? cookieEmail = HttpContext.Request.Cookies["email"];
-        //     string? cookieSessionId = HttpContext.Request.Cookies["sessionId"];
-
-        //     System.Console.WriteLine($"{Environment.NewLine} cookie {cookieEmail} {Environment.NewLine}");
-        //     System.Console.WriteLine($"{Environment.NewLine} session id {cookieSessionId} {Environment.NewLine}");
-        //     if(cookieSessionId != null)
-        //     {
-        //         SessionsModel? sessionModel = DbSessions.GetSessionById(cookieSessionId);
-        //         if(sessionModel != null)
-        //         {
-
-        //             int loggedInUserId = DbUsers.GetUserByEmail(cookieEmail).UserId;
-
-        //             var profileOwnerDetails = DbUsers.GetInformationById(profileLink);
-        //             var profileOwner = new ProfileModel();
-        //             profileOwner.DoesUserOwnProfile = DbUsers.DoesUserOwnProfile(cookieEmail,profileLink);
-        //             profileOwner.User = profileOwnerDetails;
-        //             profileOwner.AlbumList = DbAlbums.GetAllAlbumsByProfileLink(profileLink);
-        //             profileOwner.PhotoList = DbPhotos.GetAllPhotosByProfileLink(profileLink);
-                    
-        //             FriendsModel profileOwnerFriends = DbFriends.GetFriendsData(profileOwner.User.UserId);
-        //             profileOwner.IsUserInFriendsList = DbFriends.IsInFriendsList(loggedInUserId,profileOwnerFriends.FriendsList);
-        //             profileOwner.IsUserInFriendReqList = DbFriends.IsInFriendReqList(loggedInUserId, profileOwnerFriends.FriendRequests);
-        //             FriendsModel loggedInUserFriendsData = DbFriends.GetFriendsData(loggedInUserId);
-        //             profileOwner.IsProfileOwnerInFriendReqList = DbFriends.IsInFriendReqList(profileOwner.User.UserId,loggedInUserFriendsData.FriendRequests);
-        //             profileOwner.FriendsList = DbFriends.GetListAsUserObj(profileOwnerFriends.FriendsList);
-
-        //             var postList = DbPosts.GetAllPostDetails(profileLink);
-                    
-        //             //checks to see if the user has any posts
-        //             if(postList != null)
-        //             {
-        //                 profileOwner.PostsList = postList.OrderByDescending( item => item.DatePosted ).ToList();
-        //                 //iterates through each post
-        //                 foreach (PostModel post in profileOwner.PostsList)
-        //                 {
-        //                     //gets all comments on post as a list<commentModel> (GetCommentsByPost)
-        //                     //and assigns them to the model
-        //                     post.CommentsListObj = DbComments.GetCommentsByPost(post.PostId);
-        //                     post.DoesUserLikesAPost = DbLikes.IsUserInLikersList(loggedInUserId, post.LikesList);
-        //                     post.Poster = DbUsers.GetUserById(post.UserId);
-        //                     post.DoesUserOwnsThePost = post.UserId == loggedInUserId ? true : false;
-        //                 }
-        //             }
-                    
-        //             // return View("/Views/Profile/Profile.cshtml", profileOwner);
-        //             return Json(profileOwner.User);
-        //         }
-        //     }
-        //     // return RedirectToAction("doLoginAction", "Login");
-        //     return Unauthorized();
-        // }
-        // // return RedirectToAction("doLoginAction", "Login");
-        // return Unauthorized();
     }
     
     [HttpPatch]
