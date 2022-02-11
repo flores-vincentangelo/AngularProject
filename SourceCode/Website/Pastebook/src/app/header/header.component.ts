@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   isAccountPanelVisible = false;
-  constructor() { }
+  constructor(private login: LoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -17,4 +19,9 @@ export class HeaderComponent implements OnInit {
     this.isAccountPanelVisible = !this.isAccountPanelVisible;
   }
 
+  logOut() {
+    this.login.logout().subscribe((data: any) => {
+      this.router.navigate(['/login']);
+    });
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-// import { LoginService } from '../login.service';
+import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,14 +19,8 @@ export class LoginComponent implements OnInit {
       Validators.required
     ])
   });
-  // router: any;
   
-  constructor() {}
-  // constructor(private loginService: LoginService) { 
-  // //   if (this.loginService.loggedInUserValue) {
-  // //     this.router.navigate(['/']);
-  // // }
-  // }
+  constructor(private login: LoginService, private router: Router) {}
 
   ngOnInit(): void {
   }
@@ -36,5 +31,14 @@ export class LoginComponent implements OnInit {
 
   get password() {
     return this.userForm.get('password');
+  }
+
+  logIn() {
+    this.login.login(this.email?.value, this.password?.value).subscribe((data: any) => {
+      document.cookie = 'email=' + this.email?.value;
+      const sessionId = data.id;
+      document.cookie = 'sessionId=' +  sessionId;
+      this.router.navigate(['']);
+    });
   }
 }
