@@ -20,8 +20,8 @@ export class HeaderComponent implements OnInit {
   }
 
   logOut() {
-    this.login.logout().subscribe(data => console.log(data)
-    );
+    this.login.logout().subscribe((data: any) => {
+    });
     this.router.navigate(['/login']);
     document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     document.cookie = "sessionId=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
