@@ -2,7 +2,7 @@
     <div class="profile-post-container-status">
         <div class="profile-post-container-status-user">
             <div class="profile-post-container-status-user1">
-                <img id="user-photo" src="../../assets/img_avatar.png">
+                <img id="user-photo" src={{user.photo}}>
                 <form class="status-edit">
                     <input type="text" autocomplete="off" id="status" name="status"
                         placeholder="What's on your mind?" (focus)="AddPostVisibleToggle()">
