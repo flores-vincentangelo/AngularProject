@@ -21,9 +21,10 @@ export class HeaderComponent implements OnInit {
 
   logOut() {
     this.login.logout().subscribe((data: any) => {
-      document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-      document.cookie = "sessionId=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-      this.router.navigate(['/login']);
     });
+    this.router.navigate(['/login']);
+    document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    document.cookie = "sessionId=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    
   }
 }
