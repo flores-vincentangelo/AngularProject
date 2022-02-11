@@ -19,9 +19,9 @@ export class HeaderComponent implements OnInit {
     this.isAccountPanelVisible = !this.isAccountPanelVisible;
   }
 
-  logOut() {
-    this.login.logout().subscribe((data: any) => {
-      this.router.navigate(['/login']);
-    });
-  }
+  // logOut() {
+  //   this.login.logout().subscribe((data: any) => {
+  //     this.router.navigate(['/login']);
+  //   });
+  // }
 }
