@@ -25,7 +25,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
     });
     this.profileOwnerService.getProfileOwner(this.profileLink).subscribe(data => {
       this.profileOwner = data;
-      console.log(data);
     });
   }
 
