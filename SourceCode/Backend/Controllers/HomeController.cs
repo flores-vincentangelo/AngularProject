@@ -170,6 +170,8 @@ public class HomeController: Controller
                     {
                         //gets all comments on post as a list<commentModel> (GetCommentsByPost)
                         //and assigns them to the model
+                        DateTime readableDatePosted = new System.DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(post.DatePosted);
+                        post.ReadableDatePosted = readableDatePosted.ToString("MMMM dd, yyyy H:mm:ss");
                         post.CommentsListObj = DbComments.GetCommentsByPost(post.PostId);
                         post.DoesUserLikesAPost = DbLikes.IsUserInLikersList(loggedInUserId, post.LikesList);
                         post.Poster = DbUsers.GetUserById(post.UserId);

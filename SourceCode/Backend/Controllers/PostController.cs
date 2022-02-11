@@ -41,8 +41,7 @@ public class PostController: Controller
         post.UserId = DbUsers.GetUserByEmail(cookieEmail).UserId;
         post.ProfileLink = cookieProfileLink;
         post.DatePosted = (long)((System.DateTime.Now.Subtract(new System.DateTime(1970, 1, 1))).TotalSeconds);
-        DateTime readableDatePosted = new System.DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(post.DatePosted);
-        post.ReadableDatePosted = readableDatePosted.ToString("yyyy-MM-dd");
+
         if (post.Photo == null) {
             post.Photo = "";
             post.PhotoId = 0;
