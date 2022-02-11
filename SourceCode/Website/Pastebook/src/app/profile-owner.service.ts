@@ -11,6 +11,6 @@ export class ProfileOwnerService {
 
   getProfileOwner(profileLink: string): Observable<Object>{
     const url = `http://localhost:5000/${profileLink}`;
-    return this.http.get<IUser>(url);
+    return this.http.get(url);
   }
 }
