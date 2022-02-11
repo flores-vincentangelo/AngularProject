@@ -188,7 +188,7 @@ public class HomeController: Controller
     }
 
     [HttpGet]
-    [Route("/user")]
+    [Route("/homeuser")]
     public IActionResult GetHomeUser()
     {
         ViewData["Title"] = "";
