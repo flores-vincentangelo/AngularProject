@@ -28,6 +28,7 @@ export class LoginService {
   }
 
   logout(){
-    return this.http.delete(`http://localhost:5000/login`);
+    this.cookieService.deleteAll();
+    return this.http.delete<any>(`http://localhost:5000/login`);
   }
 }
