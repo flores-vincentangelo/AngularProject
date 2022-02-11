@@ -1,3 +1,6 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 .profile-post-container {
     display: flex;
     justify-content: center;

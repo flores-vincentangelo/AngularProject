@@ -17,7 +17,7 @@
                 <p>Connect with friends and the world<br>around you on Pastebook</p>
             </div>
             <div class="login-container-form">
-                <form class = "login-container-form-form" [formGroup]="userForm">
+                <form class = "login-container-form-form" [formGroup]="userForm" (ngSubmit)="logIn()">
                     <input formControlName="email" type="email" id="EmailAddress" placeholder="Email address">
                     <p *ngIf="email?.touched && email?.invalid">
                         <span *ngIf="email?.errors?.['required']">**This field is required!</span><br>
